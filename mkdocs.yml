@@ -1,0 +1,74 @@
+# mkdocs.yml
+# Material for MkDocs 主题配置示例
+# mkdocs serve --livereload # 启动本地服务器查看效果（不加后边的--liverhood不能够实现实时预览，比较奇怪）
+# 项目基本信息配置
+site_name: 网站  # 网站标题，显示在浏览器标签和导航栏
+site_description: The PastWithin 的站点  # 网站描述，用于SEO
+site_author: The PastWithin  # 网站作者
+# 网站版权信息
+copyright: Copyright © 2025 The PastWithin  # 网站版权信息
+# 主题配置 - 核心部分
+theme:
+  name: material  # 使用Material主题
+  language: zh  # 网站语言，中文
+  icon:
+    logo: material/github # 网站图标，使用Material图标库的GitHub图标
+
+  # 调色板配置 - 主题颜色
+  palette:
+    # 浅色模式配色
+    - scheme: default
+      primary: black  # 主色调 - 黑色
+      accent: blue  # 强调色 - 蓝色
+      toggle:
+        icon: material/weather-sunny  # 浅色模式图标
+        name: 切换到深色模式
+    
+    # 深色模式配色
+    - scheme: slate
+      primary: grey  # 主色调 - 灰色
+      accent: black  # 强调色 - 黑色
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+        
+
+  # 字体配置
+  font:
+    text: Roboto  # 正文字体
+    code: Roboto Mono  # 代码字体
+  # 
+  features:
+    - navigation.tabs  # 启用标签导航
+    - navigation.top  # 启用顶部导航
+    - navigation.sections  # 启用分段导航
+    - navigation.instant  # 启用即时导航
+    - navigation.expand  # 启用导航展开功能
+    - navigation.indexes    # 章节索引页
+    - search.highlight  # 启用搜索高亮
+  
+  extra_css:
+  - assets/css/extra.css  # 自定义CSS文件路径
+nav:
+  - 首页: 
+    - 主页: index.md
+    - 网站介绍: homepage/网站介绍.md
+    - 联系方式: homepage/联系方式.md
+  
+  - 工具:
+    - 工具: guide/index.md 
+    - Vscode: guide/Vscode.md
+    - Markdown: guide/Markdown.md
+    - Latex: guide/Latex.md
+  
+  - 软件资源:
+    - Vscode: resourses/Vscode.md
+    - Typora: resourses/Typora.md
+    - PS: resourses/PS.md
+  
+  - 暂时还没有:
+    - 无线电应用和实验: notes/无线电应用和实验.md
+    - 暂时还没有: notes/暂时还没有.md
+
+  - 日记:
+    - 日记: Dear/Dear.md
